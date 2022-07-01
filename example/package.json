@@ -8,7 +8,7 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "flashcardui": "^1.0.0",
+    "flashcardui": "^1.1.0",
     "react-app-polyfill": "^1.0.0"
   },
   "alias": {

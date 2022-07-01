@@ -17,7 +17,7 @@ UI library for flash card application
 ```tsx
 import React, { Component } from 'react';
 
-import { Button } from 'flashcardlibraryui';
+import { Button } from 'flashcardui';
 
 class Example extends Component {
   render() {
@@ -36,6 +36,14 @@ class Example extends Component {
 ## Github
 
 https://github.com/GodsonAddy/flashcardui
+
+## Error
+
+If you get this error below when you run npm start after installing this package, just install npm i styled-components in your terminal and then npm start
+
+Module not found: Error: Can't resolve 'styled-components' in 'C:\Users\your-name\OneDrive\Documents\GitHub\flashcard-frontend\node_modules\flashcardui\dist'
+ERROR in ./node_modules/flashcardui/dist/flashcardui.esm.js 2:0-54
+Module not found: Error: Can't resolve 'styled-components' in 'C:\Users\your-name\OneDrive\Documents\GitHub\flashcard-frontend\node_modules\flashcardui\dist'
 
 ## License
 

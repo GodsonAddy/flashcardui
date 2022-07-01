@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="2354858baee7e0ae67ce5dcd33c9736a">
+    <link rel="preconnect" href="4a8a00904bae35c1104942c334d95ef2" crossorigin="">
+    <link href="3f80cd261416bf325167cf29b6764db2" rel="stylesheet">
+    <title>Playground</title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script src="49ddde1827c9aed92990d72b99f893ac"></script>
+  </body>
+</html>

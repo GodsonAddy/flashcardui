@@ -1,0 +1,177 @@
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var React = require('react');
+var React__default = _interopDefault(React);
+var styled = require('styled-components');
+var styled__default = _interopDefault(styled);
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+function _taggedTemplateLiteralLoose(strings, raw) {
+  if (!raw) {
+    raw = strings.slice(0);
+  }
+
+  strings.raw = raw;
+  return strings;
+}
+
+var _templateObject;
+var Poppins = /*#__PURE__*/styled__default.p(_templateObject || (_templateObject = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');\n\n  font-family: 'Poppins', sans-serif;\n  font-weight: 400;\n"])));
+
+var _templateObject$1, _templateObject2, _templateObject3, _templateObject4;
+var rippleEffect = /*#__PURE__*/styled.keyframes(_templateObject$1 || (_templateObject$1 = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  0% {\n    transform: scale(1);\n    opacity: 1;\n  }\n  50% {\n    transform: scale(10);\n    opacity: 0.375;\n  }\n  100% {\n    transform: scale(35);\n    opacity: 0;\n  }\n"])));
+var StyledRipple = /*#__PURE__*/styled__default.span(_templateObject2 || (_templateObject2 = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  position: absolute;\n  border-radius: 50%;\n  animation: 0.9s ease 1 forwards ", ";\n  content: '';\n  width: 100%;\n  height: 100%;\n  background-color: #eeeeee;\n  display: block;\n  opacity: 1;\n"])), rippleEffect);
+var StyledContent = /*#__PURE__*/styled__default.span(_templateObject3 || (_templateObject3 = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  position: relative;\n  z-index: 2;\n"])));
+var StyledButton = /*#__PURE__*/styled__default.button(_templateObject4 || (_templateObject4 = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  font-weight: 700;\n  border: none;\n  cursor: ", ";\n  display: inline-block;\n  line-height: 1;\n  font-size: 1em;\n  margin: 1em;\n  padding: 0.25em 1em;\n  border-radius: ", ";\n  text-align: center;\n  position: relative;\n  overflow: hidden;\n\n  &.fullWidth {\n    display: block;\n    width: 100%;\n    padding: 14px 28px;\n    font-size: 16px;\n  }\n  &.large {\n    font-size: 16px;\n    padding: 12px 24px;\n  }\n\n  &.medium {\n    font-size: 14px;\n    padding: 11px 20px;\n  }\n\n  &.small {\n    font-size: 12px;\n    padding: 10px 16px;\n  }\n\n  &.contained {\n    background-color: ", " !important;\n    color: ", " !important;\n    :hover {\n      background-color: ", " !important;\n    }\n    opacity: ", " !important;\n  }\n\n  &.outlined {\n    background-color: white;\n    color: ", " !important;\n    border: 1px solid ", " !important;\n    :hover {\n      border: ", " solid\n        ", " !important;\n      color: ", " !important;\n    }\n    opacity: ", " !important;\n  }\n\n  &.text {\n    color: ", " !important;\n    background-color: transparent;\n    :hover {\n      color: ", " !important;\n    }\n    opacity: ", " !important;\n  }\n"])), function (props) {
+  return props.disabled ? !'pointer' : 'pointer';
+}, function (props) {
+  return props.rounded ? '20px' : '3px';
+}, function (props) {
+  return props.disabled ? '#e0e0e0' : props.color;
+}, function (props) {
+  return props.disabled ? '#424242' : '#ffffff';
+}, function (props) {
+  return props.disabled ? '#e0e0e0' : props.hover;
+}, function (props) {
+  return props.disabled ? 0.5 : 1;
+}, function (props) {
+  return props.disabled ? '#424242' : props.color;
+}, function (props) {
+  return props.disabled ? '#e0e0e0' : props.color;
+}, function (props) {
+  return props.disabled ? '1px' : '2px';
+}, function (props) {
+  return props.disabled ? '#e0e0e0' : props.hover;
+}, function (props) {
+  return props.disabled ? '#424242' : props.hover;
+}, function (props) {
+  return props.disabled ? 0.5 : 1;
+}, function (props) {
+  return props.disabled ? '#424242' : props.color;
+}, function (props) {
+  return props.disabled ? '#424242' : props.hover;
+}, function (props) {
+  return props.disabled ? 0.5 : 1;
+});
+
+var _excluded = ["disabled", "size", "buttonType", "label", "hover", "rounded", "onClick", "color", "children"];
+/** This is your favorite button */
+
+var Button = function Button(_ref) {
+  var _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$size = _ref.size,
+      size = _ref$size === void 0 ? 'medium' : _ref$size,
+      _ref$buttonType = _ref.buttonType,
+      buttonType = _ref$buttonType === void 0 ? 'text' : _ref$buttonType,
+      label = _ref.label,
+      hover = _ref.hover,
+      _ref$rounded = _ref.rounded,
+      rounded = _ref$rounded === void 0 ? false : _ref$rounded,
+      onClick = _ref.onClick,
+      _ref$color = _ref.color,
+      color = _ref$color === void 0 ? '#2196f3' : _ref$color,
+      children = _ref.children,
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
+
+  var _useState = React.useState({
+    x: -1,
+    y: -1
+  }),
+      coords = _useState[0],
+      setCoords = _useState[1];
+
+  var _useState2 = React.useState(false),
+      isRippling = _useState2[0],
+      setIsRippling = _useState2[1];
+
+  React.useEffect(function () {
+    if (coords.x !== -1 && coords.y !== -1) {
+      setIsRippling(true);
+      setTimeout(function () {
+        return setIsRippling(false);
+      }, 300);
+    } else setIsRippling(false);
+  }, [coords]);
+  React.useEffect(function () {
+    if (!isRippling) setCoords({
+      x: -1,
+      y: -1
+    });
+  }, [isRippling]);
+
+  var RippleClick = function RippleClick(e) {
+    var rect = e.target.getBoundingClientRect();
+    setCoords({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top
+    });
+    onClick && onClick(e);
+  };
+
+  return React__default.createElement(Poppins, null, React__default.createElement(StyledButton, Object.assign({
+    type: "button",
+    className: ["" + buttonType, "" + size].join(' '),
+    style: {
+      backgroundColor: buttonType === 'contained' ? color : 'transparent',
+      color: color
+    },
+    disabled: disabled,
+    rounded: rounded,
+    hover: hover,
+    onClick: RippleClick
+  }, props), isRippling ? React__default.createElement(StyledRipple, {
+    style: {
+      left: coords.x,
+      top: coords.y
+    }
+  }) : '', React__default.createElement(StyledContent, null, children), label));
+};
+
+var _templateObject$2;
+var StorybookFlashCard = /*#__PURE__*/styled__default.div(_templateObject$2 || (_templateObject$2 = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  font-weight: 400;\n  background-color: white;\n  border: 1px solid #bacdd8;\n  padding: 8px 30px 25px 30px;\n  border-radius: 12px;\n  cursor: pointer;\n"])));
+
+var _excluded$1 = ["title", "content", "divider"];
+var FlashCard = function FlashCard(_ref) {
+  var title = _ref.title,
+      content = _ref.content,
+      _ref$divider = _ref.divider,
+      divider = _ref$divider === void 0 ? false : _ref$divider,
+      props = _objectWithoutPropertiesLoose(_ref, _excluded$1);
+
+  return React__default.createElement(Poppins, null, React__default.createElement(StorybookFlashCard, Object.assign({}, props), React__default.createElement("h2", null, title), divider ? React__default.createElement("hr", null) : null, React__default.createElement("p", null, content)));
+};
+
+var _templateObject$3, _templateObject2$1;
+var StorybookQuestionnaire = /*#__PURE__*/styled__default.div(_templateObject$3 || (_templateObject$3 = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  font-weight: 400;\n  background-color: white;\n  border: 1px solid #bacdd8;\n  padding: 8px 30px 25px 30px;\n  border-radius: 12px;\n"])));
+var StorybookCapital = /*#__PURE__*/styled__default.div(_templateObject2$1 || (_templateObject2$1 = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  text-indent: 1.5em;\n  &:first-letter {\n    text-transform: capitalize;\n    font-size: 2em;\n    font-weight: bold;\n  }\n"])));
+
+var _excluded$2 = ["content"];
+var Questionnaire = function Questionnaire(_ref) {
+  var content = _ref.content,
+      props = _objectWithoutPropertiesLoose(_ref, _excluded$2);
+
+  return React__default.createElement(Poppins, null, React__default.createElement(StorybookQuestionnaire, Object.assign({}, props), React__default.createElement(StorybookCapital, null, content)));
+};
+
+exports.Button = Button;
+exports.FlashCard = FlashCard;
+exports.Questionnaire = Questionnaire;
