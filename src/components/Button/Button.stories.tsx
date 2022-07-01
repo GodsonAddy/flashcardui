@@ -16,9 +16,9 @@ const meta: Meta = {
     hover: { control: 'color' },
     onClick: { action: 'clicked' },
   },
-  // parameters: {
-  //   controls: { expanded: true },
-  // },
+  parameters: {
+    controls: { expanded: true },
+  },
 };
 export default meta;
 const Template: Story<ButtonProps> = args => <Button {...args} />;

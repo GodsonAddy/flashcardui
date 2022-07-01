@@ -2,7 +2,8 @@ import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { createGlobalStyle } from 'styled-components';
-import { Button } from '../.';
+
+import { Button } from 'flashcardui';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -11,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 const App = () => {
   return (
-    <React.Fragment>
+    <div>
       <GlobalStyle />
       <Button
         color="#ff7043"
@@ -19,7 +20,7 @@ const App = () => {
         hover="#bf360c"
         buttonType="contained"
       />
-    </React.Fragment>
+    </div>
   );
 };
 

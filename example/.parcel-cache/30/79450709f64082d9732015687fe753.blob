@@ -1,0 +1,59 @@
+var helpers = require("./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  require('react-app-polyfill/ie11');
+  var _react = require('react');
+  var _reactDom = require('react-dom');
+  var _styledComponents = require('styled-components');
+  var _flashcardui = require('flashcardui');
+  var _jsxFileName = "C:\\Users\\Godson\\Desktop\\flashcardui\\example\\index.tsx";
+  const GlobalStyle = (_styledComponents.createGlobalStyle)`
+  body {
+    font-family: "Poppins",sans-serif
+  }
+`;
+  const App = () => {
+    return (
+      /*#__PURE__*/_react.createElement("div", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15,
+          columnNumber: 5
+        }
+      }, /*#__PURE__*/_react.createElement(GlobalStyle, {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16,
+          columnNumber: 7
+        }
+      }), /*#__PURE__*/_react.createElement(_flashcardui.Button, {
+        color: "#ff7043",
+        label: "flashUI",
+        hover: "#bf360c",
+        buttonType: "contained",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17,
+          columnNumber: 7
+        }
+      }))
+    );
+  };
+  _reactDom.render(/*#__PURE__*/_react.createElement(App, {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27,
+      columnNumber: 17
+    }
+  }), document.getElementById('root'));
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

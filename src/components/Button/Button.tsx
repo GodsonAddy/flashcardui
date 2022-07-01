@@ -4,6 +4,7 @@ import React, {
   useState,
   useEffect,
 } from 'react';
+import { Poppins } from '../../style';
 import { StyledButton, StyledContent, StyledRipple } from './Button.style';
 
 export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
@@ -65,31 +66,33 @@ export const Button = ({
   };
 
   return (
-    <StyledButton
-      type="button"
-      className={[`${buttonType}`, `${size}`].join(' ')}
-      style={{
-        backgroundColor: buttonType === 'contained' ? color : 'transparent',
-        color,
-      }}
-      disabled={disabled}
-      rounded={rounded}
-      hover={hover}
-      onClick={RippleClick}
-      {...props}
-    >
-      {isRippling ? (
-        <StyledRipple
-          style={{
-            left: coords.x,
-            top: coords.y,
-          }}
-        />
-      ) : (
-        ''
-      )}
-      <StyledContent>{children}</StyledContent>
-      {label}
-    </StyledButton>
+    <Poppins>
+      <StyledButton
+        type="button"
+        className={[`${buttonType}`, `${size}`].join(' ')}
+        style={{
+          backgroundColor: buttonType === 'contained' ? color : 'transparent',
+          color,
+        }}
+        disabled={disabled}
+        rounded={rounded}
+        hover={hover}
+        onClick={RippleClick}
+        {...props}
+      >
+        {isRippling ? (
+          <StyledRipple
+            style={{
+              left: coords.x,
+              top: coords.y,
+            }}
+          />
+        ) : (
+          ''
+        )}
+        <StyledContent>{children}</StyledContent>
+        {label}
+      </StyledButton>
+    </Poppins>
   );
 };
