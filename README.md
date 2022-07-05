@@ -39,11 +39,13 @@ https://github.com/GodsonAddy/flashcardui
 
 ## Error
 
-If you get this error below when you run npm start after installing this package, just install npm i styled-components in your terminal and then npm start
+If you get this error below when you run npm start after installing this package, 
+  - run "npm i styled-components" in your terminal and then "npm star"  OR
+  - delete package-lock.json and node_modules, after that run "npm install"
 
-Module not found: Error: Can't resolve 'styled-components' in 'C:\Users\your-name\OneDrive\Documents\GitHub\flashcard-frontend\node_modules\flashcardui\dist'
+Module not found: Error: Can't resolve 'styled-components' in 'C:\Users\your-name\name-of-your-app\node_modules\flashcardui\dist'
 ERROR in ./node_modules/flashcardui/dist/flashcardui.esm.js 2:0-54
-Module not found: Error: Can't resolve 'styled-components' in 'C:\Users\your-name\OneDrive\Documents\GitHub\flashcard-frontend\node_modules\flashcardui\dist'
+Module not found: Error: Can't resolve 'styled-components' in 'C:\Users\your-name\name-of-your-app\node_modules\flashcardui\dist'
 
 ## License
 

@@ -40,8 +40,7 @@ export const StyledButton: any = styled.button<ButtonProps>`
   display: inline-block;
   line-height: 1;
   font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
+  padding: 10px;
   border-radius: ${props => (props.rounded ? '20px' : '3px')};
   text-align: center;
   position: relative;
@@ -51,7 +50,7 @@ export const StyledButton: any = styled.button<ButtonProps>`
     display: block;
     width: 100%;
     padding: 14px 28px;
-    font-size: 16px;
+    font-size: 18px;
   }
   &.large {
     font-size: 16px;
