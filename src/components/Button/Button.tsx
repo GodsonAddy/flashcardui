@@ -70,13 +70,10 @@ export const Button = ({
       <StyledButton
         type="button"
         className={[`${buttonType}`, `${size}`].join(' ')}
-        style={{
-          backgroundColor: buttonType === 'contained' ? color : 'transparent',
-          color,
-        }}
         disabled={disabled}
         rounded={rounded}
         hover={hover}
+        color={color}
         onClick={RippleClick}
         {...props}
       >

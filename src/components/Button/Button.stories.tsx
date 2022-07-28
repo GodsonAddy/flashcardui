@@ -21,7 +21,7 @@ const meta: Meta = {
   },
 };
 export default meta;
-const Template: Story<ButtonProps> = args => <Button {...args} />;
+const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
 export const Default = Template.bind({});
 
@@ -36,7 +36,7 @@ Secondary.args = {
   hover: '#002984',
   onClick: action('secondary click'),
   buttonType: 'contained',
-  color: 'salmon',
+  color: 'white',
 };
 
 export const Large = Template.bind({});

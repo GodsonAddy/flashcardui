@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 import { ButtonProps } from './Button';
 
 const rippleEffect = keyframes`
@@ -16,10 +16,14 @@ const rippleEffect = keyframes`
   }
 `;
 
+const animationRule = css`
+  animation: ${rippleEffect} 0.9s ease 1 forwards;
+`;
+
 export const StyledRipple: any = styled.span<ButtonProps>`
   position: absolute;
   border-radius: 50%;
-  animation: 0.9s ease 1 forwards ${rippleEffect};
+  animation: ${animationRule};
   content: '';
   width: 100%;
   height: 100%;
@@ -36,12 +40,12 @@ export const StyledContent = styled.span`
 export const StyledButton: any = styled.button<ButtonProps>`
   font-weight: 700;
   border: none;
-  cursor: ${props => (props.disabled ? !'pointer' : 'pointer')};
+  cursor: ${(props) => (props.disabled ? !'pointer' : 'pointer')};
   display: inline-block;
   line-height: 1;
   font-size: 1em;
   padding: 10px;
-  border-radius: ${props => (props.rounded ? '20px' : '3px')};
+  border-radius: ${(props) => (props.rounded ? '20px' : '3px')};
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -68,34 +72,33 @@ export const StyledButton: any = styled.button<ButtonProps>`
   }
 
   &.contained {
-    background-color: ${props =>
-      props.disabled ? '#e0e0e0' : props.color} !important;
-    color: ${props => (props.disabled ? '#424242' : '#ffffff')} !important;
+    background-color: ${(props) => (props.disabled ? '#e0e0e0' : props.color)};
+    color: ${(props) => (props.disabled ? '#424242' : 'white')};
     :hover {
-      background-color: ${props =>
-        props.disabled ? '#e0e0e0' : props.hover} !important;
+      background-color: ${(props) =>
+        props.disabled ? '#e0e0e0' : props.hover};
     }
-    opacity: ${props => (props.disabled ? 0.5 : 1)} !important;
+    opacity: ${(props) => (props.disabled ? 0.5 : 1)};
   }
 
   &.outlined {
     background-color: white;
-    color: ${props => (props.disabled ? '#424242' : props.color)} !important;
-    border: 1px solid ${props => (props.disabled ? '#e0e0e0' : props.color)} !important;
+    color: ${(props) => (props.disabled ? '#424242' : props.color)};
+    border: 1px solid ${(props) => (props.disabled ? '#e0e0e0' : props.color)};
     :hover {
-      border: ${props => (props.disabled ? '1px' : '2px')} solid
-        ${props => (props.disabled ? '#e0e0e0' : props.hover)} !important;
-      color: ${props => (props.disabled ? '#424242' : props.hover)} !important;
+      border: ${(props) => (props.disabled ? '1px' : '2px')} solid
+        ${(props) => (props.disabled ? '#e0e0e0' : props.hover)};
+      color: ${(props) => (props.disabled ? '#424242' : props.hover)};
     }
-    opacity: ${props => (props.disabled ? 0.5 : 1)} !important;
+    opacity: ${(props) => (props.disabled ? 0.5 : 1)};
   }
 
   &.text {
-    color: ${props => (props.disabled ? '#424242' : props.color)} !important;
+    color: ${(props) => (props.disabled ? '#424242' : props.color)};
     background-color: transparent;
     :hover {
-      color: ${props => (props.disabled ? '#424242' : props.hover)} !important;
+      color: ${(props) => (props.disabled ? '#424242' : props.hover)};
     }
-    opacity: ${props => (props.disabled ? 0.5 : 1)} !important;
+    opacity: ${(props) => (props.disabled ? 0.5 : 1)};
   }
 `;
